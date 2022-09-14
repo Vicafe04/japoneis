@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Livro Caixa</title>
+</head>
+
+<body onload="carregar()">
+
+    <p id="title">
+    <h1><b>Livro Caixa</br></br></b></h1>
+    </p>
+    <hr width="200px" color="black">
+    <p>Filtro</p>
+    <input id="inpDate" type="date">
+    <button onClick="filtro()">Filtrar</button>
+    <br>
+
+
+    <input placeholder="Descrição" type="text" id="desc">
+    <input placeholder="Valor" type="number" id="value">
+    <div class="check">
+        <p>Debitar</p>
+        <input value="D" placeholder="D" type="radio" id="type" name="type">
+        <p>Creditar</p>
+        <input value="C" placeholder="C" type="radio" id="type" name="type">
+    </div>
+    <button onClick="send()">Cadastrar</button>
+
+
+    <div class="list">
+        <div class="contentTableD">
+            <h2>Debito</h2>
+            <table class="listD">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody1">
+                </tbody>
+            </table>
+        </div>
+        <div class="contentTableC">
+            <h2>Credito</h1>
+            <table class="listC">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody2">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p id="saldo"></p>
+</body>
+<script src="./script.js"></script>
+
+</html>
